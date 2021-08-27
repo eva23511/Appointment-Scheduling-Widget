@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+/*########### Defaults ###########*/
+body {
+    font-family: 'Lato', 'helvetica', 'sans-serif';
+    text-align: center;
+    scroll-behavior: smooth;
+}
+
+.card {
+    border: none;
+    border-radius: unset;
+}
+
+/*############### Nav bar ############*/
+
+.container-fluid.header {
+    display: block;
+    width: 100%;
+    padding: 14px;
+}
+
+.navbar-brand {
+    margin: 0;
+    text-decoration: none;
+}
+
+/*############### Scheduling section ############*/
+
+.calendar-wrapper {
+    display: flex;
+    overflow: hidden;
+    max-width: 790px;
+    min-width: 670px;
+    padding: 0;
+    margin: auto;
+    margin-top: 3%;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,.125);
+    -webkit-box-shadow: 0 3px 8px rgb(0 0 0 / 25%);
+    box-shadow: 0 3px 8px rgb(0 0 0 / 25%);
+}
+
+.flex-item {
+    flex: 1;
+    transition: all 0.3s ease-out;
+}
+
+.collapsed {
+    flex: 0 !important;
+    min-width: 0 !important;
+}
+
+/*############### Scheduling section > Information section ############*/
+
+.info-box {
+    margin: 0;
+    padding: 3rem 1rem; 
+    min-height: 520px;
+    min-width: 200px;
+    background-color:white;
+}
+
+h3.info-title {
+    margin-bottom: 0px;
+    line-height: 1.5;
+    font-weight: 800;
+}
+
+h6.info-subtitle {
+    line-height: 1.5;
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+form.info-form {
+    margin-top: 15px;
+}
+
+.form-container-item {
+    margin: auto;
+    margin-bottom: 12px;
+}
+
+.form-label {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 2px;
+}
+
+.form-label.appointment-type-title {
+    margin-bottom: 6px;
+    margin-right: 8px; 
+}
+
+.appointment-types-box {
+    display: unset;
+}
+
+.form-select {
+    display: unset;
+    width: 50%;
+    margin: auto;
+    text-align-last: center;
+}
+
+.form-select.long-width {
+    width: 80%;
+}
+
+.input {
+    border:none;
+    background: none;
+    border-bottom: 1px rgba(255,255,255,.2) solid;
+    width: 75%;
+    height: 20px;
+    text-align: center;
+    transition: border-color 250ms;
+    background-color: #ECF2F6;
+}
+
+.input:focus {
+    outline:none;
+    border-color: #fff;
+}
+
+.error-input {
+    border-color: red;
+}
+
+.result-time {
+    display: none;
+}
+
+span.error-msg {
+    display:block; 
+    color:red; 
+    font-size: 0.8em;
+}
+
+span.status-msg {
+    display:none; 
+    color:black; 
+    font-size: 0.8em;
+}
+
+span.result-msg {
+    display:block; 
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #2c767d;
+    margin-top: 35px;
+}
+
+button.refresh-button {
+    border: 1px solid #9adfe0;
+    background-color: rgb(70, 121, 121); 
+    color: white;
+    border-radius: 5px;
+    padding: 4px 12px;
+    line-height: 20px;
+    margin-top: 15px;
+    max-width: 75%;
+    display: none;
+}
+
+/*############### Scheduling section > Calendar section ############*/
+
+.card.calendar-range {
+    min-height: 520px;
+    background-color:white;
+    border-left: 1px solid #d8d8d8;
+    border-right: 1px solid #d8d8d8;
+}
+
+.calendar-range.flex-item {
+    flex: 0 0 350px;
+}
+
+.pignose-calendar {
+    margin: auto;
+    width: 100%;
+    max-width: 100%;
+    border: none;
+    box-shadow: none;
+}
+
+.pignose-calendar .pignose-calendar-top {
+    box-shadow: none;
+}
+
+.pignose-calendar .pignose-calendar-unit a {
+    opacity: 1;
+    background-color: #efefef;
+}
+
+.pignose-calendar .pignose-calendar-unit.pignose-calendar-unit-disabled a {
+    opacity: .3;
+    background-color: #fff;
+}
+
+.pignose-calendar .icon-arrow-left::before {
+    content: '\25C4';
+}
+.pignose-calendar .icon-arrow-right::before {
+    content: '\25BA';
+}
+.pignose-calendar .pignose-calendar-unit a {
+    color: #2c767d;
+}
+
+/*############### Scheduling section > Available time section ############*/
+
+.card.calendar-box {
+    margin: 0;
+    min-height: 520px;
+    min-width: 190px;
+    height: 520px;
+    background-color:white;
+}
+
+label.selected-day {
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    display: block;
+    min-width: 130px;
+    margin: 10px;
+}
+
+.available-time-slots {
+    max-height: 425px;
+    margin-top: 17px;
+    overflow-y: scroll;
+}
+
+.button-box {
+    display: flex;
+    overflow: hidden;
+    max-width: 170px;
+}
+
+.button-box > button {
+    margin: 4px 3px;
+    padding: 0;
+    height: 45px;
+    font-size: 0.9em;
+    line-height: 2;
+    border-radius: 5px;
+}
+
+button.time-slots-item {
+    border: 1px solid #9adfe0;
+    background-color: white; 
+    color: gray;
+    transition: all 0.3s ease-out;
+    flex: 1 0 96%;
+}
+
+button.time-slots-item.un-collapsed {
+    flex: 3;
+}
+
+button.time-slots-item:hover {
+    border: 3px solid #00cccc;
+}
+
+button.confirm-button {
+    border: 1px solid #9adfe0;
+    background-color: rgb(127, 197, 197); 
+    color: white;
+    transition: all 0.3s ease-out;
+    flex: 3;
+}
+
+/*############### Mobile ############*/
+
+@media only screen and (max-width: 760px) {
+    .form-select {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 740px) {
+    .navbar-brand {
+        font-size: 1em;
+        margin: auto;
+    }
+
+    .calendar-wrapper {
+        margin-top: 0;
+        flex-direction: column;
+        min-width: 350px;
+        box-shadow: none;
+    }
+
+    .collapsed {
+        display: none;
+    }
+
+    .info-box {
+        margin: 0;
+        min-width: 100%;
+        min-height: 0;
+    }
+
+    .card.calendar-range {
+        border: 1px solid #d8d8d8;
+    }
+
+    .calendar-range.flex-item {
+        flex: 0 0 100%;
+    }
+
+    .disabled-range-calendar {
+        width: 100%;
+        min-height: unset;
+    }
+    
+    .card.calendar-box {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .time-slots-box {
+        min-height: 0;
+    }
+
+    .button-box {
+        max-width: 100%;
+    }
+
+    button.time-slots-item {
+        flex: 1 0 99%;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .navbar-brand {
+        font-size: 0.8em;
+    }
+    
+    .calendar-wrapper {
+        min-width: 280px;
+        max-width: 100%;
+    }
+}
