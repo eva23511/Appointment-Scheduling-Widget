@@ -10,7 +10,7 @@ This widget supports responsive display and mobile environment.
 	- key: "pid"
 	- value: **provider id**  from your Spurwing account.
 
-		> http://localhost:port/index.html?pid=[provided id]
+		> http://localhost:port/index.html?pid=[provided_id]
 
 - Select an appointment type.
 - Select an available date on the calendar.
